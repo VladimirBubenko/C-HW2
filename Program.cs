@@ -2,13 +2,35 @@
 
 // Задача 10. Программа, принимает трехзначное значение, и на выходе показывает вторую цифру этого числа
 
-int findsecond(int number)
+// int findsecond(int number)
+// {
+//     int num = (number/10)%10;
+//     return num; 
+// }
+// Console.Write("Введите число: ");
+// int newnumber = Convert.ToInt32(Console.ReadLine());
+// int result = findsecond(newnumber);
+// Console.WriteLine(result);
+
+// Задача 13. Программа, которая выводит третью цифру заданного числа (любого)
+
+int findthird (int number)
 {
-    int num = (number/10)%10;
-    return num; 
+    if (number >= 100 || number <= -100)
+    {
+        while(number/1000 > 0 || number/1000 < 0)
+        {
+            number = number/10;
+        }
+        int find= number%10;
+        return find;
+    }
+    else
+    {
+        return -1;
+    }
 }
 Console.Write("Введите число: ");
 int newnumber = Convert.ToInt32(Console.ReadLine());
-int result = findsecond(newnumber);
+int result = findthird(newnumber);
 Console.WriteLine(result);
-
