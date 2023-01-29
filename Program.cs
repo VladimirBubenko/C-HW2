@@ -13,7 +13,7 @@
 // Console.WriteLine(result);
 
 // Задача 13. Программа, которая выводит третью цифру заданного числа (любого)
-
+/*
 int findthird (int number)
 {
     if (number >= 100 || number <= -100)
@@ -34,3 +34,23 @@ Console.Write("Введите число: ");
 int newnumber = Convert.ToInt32(Console.ReadLine());
 int result = findthird(newnumber);
 Console.WriteLine(result);
+*/
+
+// Задача 15. Программа, которая принимает цифру (обозначающую день недели), и проверяет, является этот день выходным?
+
+bool free(int day)
+{
+    if(day < 6)
+    {
+       return false;
+    }
+    else
+    {
+        return true;
+    }
+
+}
+Console.Write("Введите день недели: ");
+int newnumber = Convert.ToInt32(Console.ReadLine());
+bool end = free(newnumber);
+Console.WriteLine(end);
